@@ -30,11 +30,9 @@ int solution(int n, vector<vector<int>> wires) {
         for (int j = 0; j < wires.size(); j++)
         {
             if (i == j) continue;
-            for (int k = 0; k < wires[j].size(); k++)
-            {
-                v[wires[j][0]].push_back(wires[j][1]);
-                v[wires[j][1]].push_back(wires[j][0]);
-            }
+            
+            v[wires[j][0]].push_back(wires[j][1]);
+            v[wires[j][1]].push_back(wires[j][0]);
         }
 
         dfs(1);
