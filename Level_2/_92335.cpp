@@ -3,11 +3,11 @@
 
 using namespace std;
 
-void isPrime(int& ans, int n)
+void isPrime(int& ans, long long n)
 {
     if(n == 1 || !n) return;
     
-    for(int i = 2; i*i<= n; i++)
+    for(long long i = 2; i*i<= n; i++)
         if(n%i == 0)
             return;
     
@@ -23,7 +23,7 @@ int solution(int n, int k) {
         n/=k;
     }
     
-    int t = 0;
+    long long t = 0;
     for(int i = v.size()-1; i>= 0; i--)
     {
         if(v[i] == 0)
