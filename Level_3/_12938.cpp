@@ -8,7 +8,7 @@ vector<int> solution(int n, int s) {
 
     vector<int> ans(n, s/n);
     int cnt = s % n;
-    for(int i = n; cnt>= 0; i--)
+    for(int i = n-1; cnt> 0; i--)
     {
         cnt--;
         ans[i]++;
